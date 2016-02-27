@@ -1,8 +1,9 @@
 // Vars
 $body-font: 'Noto Sans', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
 $style-font: 'Yanone Kaffeesatz', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
-$accent-color: #3c3e43;
-$highlight-accent-color: rgba($accent-color, 0.5);
+$body-color: #4e5057;
+$accent-color: #3c3e43; //#d5444c; //#dd5d61; //#ee6c6c;
+$highlight-accent-color: #cc6ee7; //#e255f3; //#d5444c;
 
 // Animations
 @keyframes bounce {
@@ -19,6 +20,7 @@ html, body {
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.5px;
+    color: $body-color;
 }
 
 body {
@@ -26,8 +28,43 @@ body {
     position: relative;
 }
 
+.Header {
+    transition: background 0.35s ease-in-out;
+
+    body.is-darkNavbar & {
+        background: #FFFFFF;
+        border-bottom: 1px solid #F7F7F7;
+    }
+}
+
+.Header-brand {
+    position: relative;
+}
+
 .Header-logo {
+    position: absolute;
+    top: 15px;
     width: 140px;
+    transition: opacity 0.15s ease-in;
+
+    &.is-dark {
+        height: 55px;
+        width: auto;
+        opacity: 0;
+
+        body.is-darkNavbar & {
+            opacity: 1;
+            transition: opacity 0.35s ease-in;
+        }
+    }
+
+    &.is-light {
+        opacity: 1;
+
+        body.is-darkNavbar & {
+            opacity: 0;
+        }
+    }
 }
 
 .Header-navLinks {
@@ -41,7 +78,7 @@ body {
         letter-spacing: 1.2px;
         padding-top: 30px;
         padding-bottom: 30px;
-        transition: line-height 0.05s ease-out, color 0.3s ease-in-out;
+        transition: line-height 0.05s ease-out, color 0.35s ease-in-out;
 
         &:hover, &:focus {
             background: none;
@@ -65,9 +102,9 @@ body {
 
 .Hero {
     position: relative;
-    background: url('../img/hero.jpg');
+    background: url('../img/hero4.jpg');
     background-size: cover;
-    background-position: left center;
+    background-position: left 16%;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 80%;
@@ -106,14 +143,18 @@ body {
 }
 
 .Hero-messageSubheading {
-    margin-top: 10px;
-    font-size: 46px;
-    font-weight: bold;
-    line-height: 50px;
-    letter-spacing: 2px;
-    text-shadow: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-    color: $accent-color;
+    // margin-top: 10px;
+    // font-size: 46px;
+    // font-weight: bold;
+    // line-height: 50px;
+    // letter-spacing: 2px;
+    // color: $accent-color;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 45px;
 }
 
 .Hero-promptWrapper {
@@ -147,5 +188,48 @@ body {
 }
 
 .Section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.Section-header {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.Section-separator {
+    height: 1px;
     border-bottom: 1px solid #EEE;
+}
+
+.Section-headerTitle {
+    font-family: $style-font;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.AboutSection-leadText {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+}
+
+.FocusAreaWrapper {
+    padding-bottom: 20px;
+}
+
+.FocusArea-header {
+    padding-bottom: 10px;
+}
+
+.FocusArea-headerTitle {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: $highlight-accent-color;
 }
