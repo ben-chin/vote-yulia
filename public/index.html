@@ -21,7 +21,7 @@
             <script src="static/js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body data-spy="scroll" data-offset="0" data-target="#navbar">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -38,9 +38,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="Header-navLinks nav navbar-nav navbar-right">
-                    <li><a href="#">About Yulia</a></li>
-                    <li><a href="#">Manifesto</a></li>
-                    <li><a href="#">Get in touch</a></li>
+                    <li data-top-hack="true"><a href="#hero"></a></li>
+                    <li><a href="#about">About Yulia</a></li>
+                    <li><a href="#manifesto">Manifesto</a></li>
+                    <li><a href="#contact">Get in touch</a></li>
                   </ul>
             </div><!--/.navbar-collapse -->
           </div>
@@ -48,7 +49,7 @@
 
 
         <!-- Content here -->
-        <div class="Hero">
+        <div id="hero" class="Hero">
             <div class="Hero-fade"></div>
             <div class="Hero-message">
                 <h1 class="Hero-messageHeading">Hi! I'm Yulia.</h1>
@@ -56,8 +57,23 @@
             </div>
 
             <div class="Hero-promptWrapper">
-                <a href="#" class="Hero-prompt"><span class="Hero-promptIcon glyphicon glyphicon-triangle-bottom"></span></a>
+                <a href="#about" class="Hero-prompt"><span class="Hero-promptIcon glyphicon glyphicon-triangle-bottom"></span></a>
             </div>
+        </div>
+
+        <div id="about" class="Section">
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
+        </div>
+
+        <div id="manifesto" class="Section">
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
+        </div>
+
+        <div id="contact" class="Section">
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
         </div>
         <!-- End content -->
 

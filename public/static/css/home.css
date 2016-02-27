@@ -14,6 +14,9 @@ html, body {
   font-size: 14px;
   letter-spacing: 0.5px; }
 
+body {
+  position: relative; }
+
 .Header-logo {
   width: 140px; }
 
@@ -30,6 +33,12 @@ html, body {
     background: none;
     line-height: 16px;
     transition: line-height 0.15s ease-in-out; }
+  body.is-darkNavbar .Header-navLinks.navbar-nav > li > a {
+    color: #3c3e43;
+    text-shadow: none; }
+
+body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
+  color: rgba(60, 62, 67, 0.5); }
 
 .Hero {
   position: relative;

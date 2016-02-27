@@ -1,6 +1,8 @@
 // Vars
 $body-font: 'Noto Sans', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
 $style-font: 'Yanone Kaffeesatz', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+$accent-color: #3c3e43;
+$highlight-accent-color: rgba($accent-color, 0.5);
 
 // Animations
 @keyframes bounce {
@@ -17,6 +19,11 @@ html, body {
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.5px;
+}
+
+body {
+    // For scrollspy
+    position: relative;
 }
 
 .Header-logo {
@@ -40,6 +47,18 @@ html, body {
             background: none;
             line-height: 16px;
             transition: line-height 0.15s ease-in-out;
+        }
+
+        body.is-darkNavbar & {
+            color: $accent-color;
+            text-shadow: none;
+        }
+    }
+
+    &.navbar-nav > li.active > a {
+
+        body.is-darkNavbar & {
+            color: $highlight-accent-color;
         }
     }
 }
@@ -94,7 +113,7 @@ html, body {
     letter-spacing: 2px;
     text-shadow: none;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-    color: #3c3e43;
+    color: $accent-color;
 }
 
 .Hero-promptWrapper {
