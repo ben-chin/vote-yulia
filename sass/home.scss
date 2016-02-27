@@ -4,6 +4,7 @@ $style-font: 'Yanone Kaffeesatz', 'Helvetica Neue', Helvetica, Verdana, sans-ser
 $body-color: #4e5057;
 $accent-color: #3c3e43; //#d5444c; //#dd5d61; //#ee6c6c;
 $highlight-accent-color: #cc6ee7; //#e255f3; //#d5444c;
+$animation-duration: 0.4s;
 
 // Animations
 @keyframes bounce {
@@ -27,6 +28,16 @@ body {
     // For scrollspy
     position: relative;
 }
+
+.has-animatedEntrance {
+    opacity: 0;
+
+    &.animateFadeIn {
+        opacity: 1;
+        transition: opacity $animation-duration ease-in-out;
+    }
+}
+
 
 .Header {
     transition: background 0.35s ease-in-out;
@@ -159,6 +170,14 @@ body {
     letter-spacing: 3px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
+    // Animation
+    transform: translateY(-15px);
+
+    &.animateFadeIn {
+        transform: translateY(0);
+        transition: opacity $animation-duration ease-in-out, transform $animation-duration ease-in-out;
+    }
+
     @media (max-width: 767px) {
         font-size: 50px;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -171,6 +190,14 @@ body {
     font-size: 40px;
     letter-spacing: 1px;
     line-height: 45px;
+
+    // Animation
+    transform: translateX(-15px);
+
+    &.animateFadeIn {
+        transform: translateX(0);
+        transition: opacity $animation-duration ease-in-out, transform $animation-duration ease-in-out;
+    }
 
     @media (max-width: 767px) {
         font-size: 26px;
