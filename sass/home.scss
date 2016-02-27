@@ -41,7 +41,7 @@ body {
         letter-spacing: 1.2px;
         padding-top: 30px;
         padding-bottom: 30px;
-        transition: line-height 0.05s ease-out;
+        transition: line-height 0.05s ease-out, color 0.3s ease-in-out;
 
         &:hover, &:focus {
             background: none;
@@ -134,7 +134,8 @@ body {
     font-size: 16px;
     color: #FFFFFF;
 
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: none;
         color: #FFF;
     }
@@ -143,4 +144,8 @@ body {
 .Hero-promptIcon {
     line-height: 35px;
     animation: bounce 2s infinite;
+}
+
+.Section {
+    border-bottom: 1px solid #EEE;
 }

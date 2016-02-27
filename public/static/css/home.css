@@ -28,7 +28,7 @@ body {
   letter-spacing: 1.2px;
   padding-top: 30px;
   padding-bottom: 30px;
-  transition: line-height 0.05s ease-out; }
+  transition: line-height 0.05s ease-out, color 0.3s ease-in-out; }
   .Header-navLinks.navbar-nav > li > a:hover, .Header-navLinks.navbar-nav > li > a:focus {
     background: none;
     line-height: 16px;
@@ -104,10 +104,13 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   padding: 0 45px;
   font-size: 16px;
   color: #FFFFFF; }
-  .Hero-prompt:hover {
+  .Hero-prompt:hover, .Hero-prompt:focus {
     text-decoration: none;
     color: #FFF; }
 
 .Hero-promptIcon {
   line-height: 35px;
   animation: bounce 2s infinite; }
+
+.Section {
+  border-bottom: 1px solid #EEE; }
