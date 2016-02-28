@@ -72,9 +72,9 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
 
 .Hero {
   position: relative;
-  background: url("../img/hero4.jpg");
+  background: url("../img/hero7.jpg");
   background-size: cover;
-  background-position: left 16%;
+  background-position: left 35%;
   background-repeat: no-repeat;
   width: 100%;
   height: 80%;
@@ -82,7 +82,7 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   @media (max-width: 767px) {
     .Hero {
       height: 60%;
-      background: url("../img/hero4-small.jpg");
+      background: url("../img/hero7-small.jpg");
       background-size: 100% auto;
       background-position: center top;
       background-repeat: no-repeat; } }
@@ -211,3 +211,6 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: #cc6ee7; }
+
+.ManifestoSection {
+  font-size: 15px; }
