@@ -29,6 +29,9 @@ body {
   body.is-darkNavbar .Header {
     background: #FFFFFF;
     border-bottom: 1px solid #F7F7F7; }
+  @media (max-width: 767px) {
+    .Header {
+      height: 70px; } }
 
 .Header-brand {
   position: relative; }
@@ -45,6 +48,9 @@ body {
     body.is-darkNavbar .Header-logo.is-dark {
       opacity: 1;
       transition: opacity 0.35s ease-in; }
+    @media (max-width: 767px) {
+      .Header-logo.is-dark {
+        height: 50px; } }
   .Header-logo.is-light {
     opacity: 1; }
     body.is-darkNavbar .Header-logo.is-light {
@@ -68,11 +74,11 @@ body {
     text-shadow: none; }
 
 body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
-  color: #cc6ee7; }
+  color: #F9C44D; }
 
 .Hero {
   position: relative;
-  background: url("../img/hero7.jpg");
+  background: url("../img/hero8.jpg");
   background-size: cover;
   background-position: left 35%;
   background-repeat: no-repeat;
@@ -82,7 +88,7 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   @media (max-width: 767px) {
     .Hero {
       height: 60%;
-      background: url("../img/hero7-small.jpg");
+      background: url("../img/hero8-small.jpg");
       background-size: 100% auto;
       background-position: center top;
       background-repeat: no-repeat; } }
@@ -132,7 +138,7 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); } }
 
 .Hero-messageSubheading {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   font-weight: normal;
   font-size: 40px;
   letter-spacing: 1px;
@@ -210,7 +216,46 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: #cc6ee7; }
+  color: #F9C44D; }
 
 .ManifestoSection {
   font-size: 15px; }
+
+.ContactSection,
+.FooterSection {
+  position: relative; }
+
+.ContactSection-text,
+.FooterSection-text {
+  text-align: center; }
+
+@media (max-width: 991px) {
+  .ContactSection {
+    padding-bottom: 150px; } }
+
+@media (max-width: 767px) {
+  .ContactSection {
+    padding-bottom: 110px; } }
+
+@media (max-width: 500px) {
+  .ContactSection {
+    padding-bottom: 105px; } }
+
+.ICUBanner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%; }
+  @media (max-width: 992px) {
+    .ICUBanner {
+      width: 60%; } }
+  @media (max-width: 500px) {
+    .ICUBanner {
+      width: 80%; } }
+
+.ICUBanner-img {
+  width: 100%;
+  height: auto; }
+
+.FooterSection {
+  padding-bottom: 10px; }
