@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Smooth scroll
     $('a.has-smoothScroll').click(function () {
         $('html, body').animate({
-            scrollTop: ($($.attr(this, 'href')).offset().top + 1),
+            scrollTop: ($($.attr(this, 'href')).offset().top + 1 - 70),
         }, 700);
         return false;
     });
