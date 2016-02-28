@@ -49,6 +49,35 @@ body {
 
     @media (max-width: 767px) {
         height: 70px;
+
+        .navbar-header {
+            height: 70px;
+        }
+    }
+
+    .navbar-toggle {
+        margin-top: 18px;
+    }
+
+    .navbar-toggle .icon-bar {
+        background: #FFFFFF;
+        border-radius: 4px;
+        height: 3px;
+        transition: background 0.25s ease-in-out;
+
+        body.is-darkNavbar & {
+            background: $highlight-accent-color;
+        }
+    }
+
+    .navbar-collapse {
+        padding-top: 40px;
+
+        body.is-darkNavbar & {
+            background: #FFFFFF;
+            border-bottom: 1px solid #F7F7F7;
+            padding-top: 0;
+        }
     }
 }
 
@@ -89,25 +118,35 @@ body {
 .Header-navLinks {
 
     // Override
-    &.navbar-nav > li > a {
-        color: #FFFFFF;
-        text-transform: uppercase;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-        font-weight: bold;
-        letter-spacing: 1.2px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        transition: line-height 0.05s ease-out, color 0.35s ease-in-out;
+    &.navbar-nav > li {
+        a {
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            transition: line-height 0.05s ease-out, color 0.35s ease-in-out;
 
-        &:hover, &:focus {
-            background: none;
-            line-height: 16px;
-            transition: line-height 0.15s ease-in-out;
+            &:hover, &:focus {
+                background: none;
+                line-height: 16px;
+                transition: line-height 0.15s ease-in-out;
+            }
+
+            body.is-darkNavbar & {
+                color: $accent-color;
+                text-shadow: none;
+            }
+
+            .navbar-collapse[aria-expanded="true"] & {
+                padding: 5px 30px;
+            }
         }
 
-        body.is-darkNavbar & {
-            color: $accent-color;
-            text-shadow: none;
+        &[data-top-hack] a {
+            padding: 0;
         }
     }
 
@@ -126,7 +165,7 @@ body {
     background-position: left 35%;
     background-repeat: no-repeat;
     width: 100%;
-    height: 80%;
+    height: 75%;
     min-height: 380px;
 
     @media (max-width: 767px) {

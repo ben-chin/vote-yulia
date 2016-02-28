@@ -31,7 +31,24 @@ body {
     border-bottom: 1px solid #F7F7F7; }
   @media (max-width: 767px) {
     .Header {
-      height: 70px; } }
+      height: 70px; }
+      .Header .navbar-header {
+        height: 70px; } }
+  .Header .navbar-toggle {
+    margin-top: 18px; }
+  .Header .navbar-toggle .icon-bar {
+    background: #FFFFFF;
+    border-radius: 4px;
+    height: 3px;
+    transition: background 0.25s ease-in-out; }
+    body.is-darkNavbar .Header .navbar-toggle .icon-bar {
+      background: #F9C44D; }
+  .Header .navbar-collapse {
+    padding-top: 40px; }
+    body.is-darkNavbar .Header .navbar-collapse {
+      background: #FFFFFF;
+      border-bottom: 1px solid #F7F7F7;
+      padding-top: 0; }
 
 .Header-brand {
   position: relative; }
@@ -56,7 +73,7 @@ body {
     body.is-darkNavbar .Header-logo.is-light {
       opacity: 0; }
 
-.Header-navLinks.navbar-nav > li > a {
+.Header-navLinks.navbar-nav > li a {
   color: #FFFFFF;
   text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -65,13 +82,18 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   transition: line-height 0.05s ease-out, color 0.35s ease-in-out; }
-  .Header-navLinks.navbar-nav > li > a:hover, .Header-navLinks.navbar-nav > li > a:focus {
+  .Header-navLinks.navbar-nav > li a:hover, .Header-navLinks.navbar-nav > li a:focus {
     background: none;
     line-height: 16px;
     transition: line-height 0.15s ease-in-out; }
-  body.is-darkNavbar .Header-navLinks.navbar-nav > li > a {
+  body.is-darkNavbar .Header-navLinks.navbar-nav > li a {
     color: #3c3e43;
     text-shadow: none; }
+  .navbar-collapse[aria-expanded="true"] .Header-navLinks.navbar-nav > li a {
+    padding: 5px 30px; }
+
+.Header-navLinks.navbar-nav > li[data-top-hack] a {
+  padding: 0; }
 
 body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   color: #F9C44D; }
@@ -83,7 +105,7 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   background-position: left 35%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 80%;
+  height: 75%;
   min-height: 380px; }
   @media (max-width: 767px) {
     .Hero {
