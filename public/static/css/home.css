@@ -174,6 +174,9 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
       font-size: 26px;
       line-height: 32px; } }
 
+.fb-like {
+  padding-top: 20px; }
+
 .Hero-promptWrapper {
   position: absolute;
   bottom: 0;
