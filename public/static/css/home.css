@@ -227,6 +227,23 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   letter-spacing: 0.5px;
   padding-bottom: 5px; }
 
+.AboutSection-videoWrapper {
+  padding-top: 20px;
+  text-align: center; }
+
+.AboutSection-videoFrame {
+  display: inline-block;
+  width: 500px;
+  height: 281px; }
+  @media (max-width: 1199px) {
+    .AboutSection-videoFrame {
+      width: 400px;
+      height: 225px; } }
+  @media (max-width: 767px) {
+    .AboutSection-videoFrame {
+      width: 300px;
+      height: 169px; } }
+
 .FocusAreaWrapper {
   padding-bottom: 20px; }
 
@@ -269,7 +286,7 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 10px; }
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     .ICUBanner {
       width: 60%; } }
   @media (max-width: 500px) {
