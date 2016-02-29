@@ -264,10 +264,11 @@ body.is-darkNavbar .Header-navLinks.navbar-nav > li.active > a {
     padding-bottom: 105px; } }
 
 .ICUBanner {
-  position: absolute;
   bottom: 0;
-  right: 0;
-  width: 30%; }
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 10px; }
   @media (max-width: 992px) {
     .ICUBanner {
       width: 60%; } }

@@ -362,10 +362,11 @@ body {
 }
 
 .ICUBanner {
-    position: absolute;
     bottom: 0;
-    right: 0;
-    width: 30%;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 10px;
 
     @media (max-width: 992px) {
         width: 60%;
